@@ -27,6 +27,7 @@
     ./modules/plugins/none-ls.nix
     ./modules/plugins/oil.nix
     ./modules/plugins/schemastore.nix
+    ./modules/plugins/snacks.nix
     ./modules/plugins/telescope.nix
     ./modules/plugins/treesitter.nix
     ./modules/plugins/trouble.nix
