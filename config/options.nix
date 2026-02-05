@@ -93,24 +93,24 @@
   globals.mapleader = " ";
 
   autoCmd = [
-    {
-      desc = "Change working directory to a git repository's root";
-      event = [ "VimEnter" ];
-      pattern = "*";
-      command = "luafile ${pkgs.writeText "cd-git-root.lua" ''
-        local gitRoot = vim.fn.system("${pkgs.git}/bin/git rev-parse --show-toplevel 2>/dev/null")
-        if (gitRoot) ~= nil and gitRoot ~= "") then
-          vim.cmd("cd " .. gitRoot)
-        end
-      ''}";
-    }
-    {
-      desc = "Open Telescope if Vim is opened without arguments";
-      event = [ "VimEnter" ];
-      callback = {
-        __raw = "function() if vim.fn.argv(0) == '' then require('telescope.builtin').find_files() end end";
-      };
-    }
+    #{
+    #desc = "Change working directory to a git repository's root";
+    #event = [ "VimEnter" ];
+    #pattern = "*";
+    #command = "luafile ${pkgs.writeText "cd-git-root.lua" ''
+    #local gitRoot = vim.fn.system("${pkgs.git}/bin/git rev-parse --show-toplevel 2>/dev/null")
+    #if (gitRoot) ~= nil and gitRoot ~= "") then
+    #vim.cmd("cd " .. gitRoot)
+    #end
+    #''}";
+    #}
+    # {
+    # desc = "Open Telescope if Vim is opened without arguments";
+    # event = [ "VimEnter" ];
+    # callback = {
+    # __raw = "function() if vim.fn.argv(0) == '' then require('telescope.builtin').find_files() end end";
+    # };
+    # }
     {
       desc = "Enable relativenumber";
       event = [ "VimEnter" ];
