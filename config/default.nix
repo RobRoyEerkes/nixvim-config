@@ -22,7 +22,7 @@
     ./modules/plugins/markdown-preview.nix
     ./modules/plugins/markview.nix
     ./modules/plugins/neoscroll.nix
-    ./modules/plugins/neotree.nix
+    # ./modules/plugins/neotree.nix
     ./modules/plugins/noice.nix
     ./modules/plugins/none-ls.nix
     ./modules/plugins/oil.nix

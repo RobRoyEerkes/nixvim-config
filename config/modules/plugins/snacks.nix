@@ -5,7 +5,7 @@
       animate.enable = true;
       bigfile.enable = true;
       bufdelete.enable = false;
-      dashboard.enable = true;
+      dashboard.enable = false;
       debug.enable = false;
       dim.enable = true;
       explorer.enable = true;

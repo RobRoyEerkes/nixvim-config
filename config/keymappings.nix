@@ -1,8 +1,9 @@
-{self, ...}: {
+{ self, ... }:
+{
   keymaps = [
-    # Neo-tree bindings
+    # Explorer bindings
     {
-      action = "<cmd>Neotree toggle<CR>";
+      action = "<cmd>lua Snacks.explorer.open()<CR>";
       key = "<leader>e";
     }
 
