@@ -39,12 +39,6 @@
     softtabstop = 0;
     smarttab = true;
 
-    # System clipboard support, needs xclip/wl-clipboard
-    clipboard = {
-      providers.wl-copy.enable = true; # Use wl-copy for wayland and xsel for Xorg
-      register = "unnamedplus";
-    };
-
     # Set encoding
     encoding = "utf-8";
     fileencoding = "utf-8";
@@ -90,40 +84,16 @@
     W.bang = true;
   };
 
+  # System clipboard support, needs xclip/wl-clipboard
+  clipboard = {
+    providers.wl-copy.enable = true; # Use wl-copy for wayland and xsel for Xorg
+    register = "unnamedplus";
+  };
   globals.mapleader = " ";
 
   autoCmd = [
-    #{
-    #desc = "Change working directory to a git repository's root";
-    #event = [ "VimEnter" ];
-    #pattern = "*";
-    #command = "luafile ${pkgs.writeText "cd-git-root.lua" ''
-    #local gitRoot = vim.fn.system("${pkgs.git}/bin/git rev-parse --show-toplevel 2>/dev/null")
-    #if (gitRoot) ~= nil and gitRoot ~= "") then
-    #vim.cmd("cd " .. gitRoot)
-    #end
-    #''}";
-    #}
-    # {
-    # desc = "Open Telescope if Vim is opened without arguments";
-    # event = [ "VimEnter" ];
-    # callback = {
-    # __raw = "function() if vim.fn.argv(0) == '' then require('telescope.builtin').find_files() end end";
-    # };
-    # }
-    {
-      desc = "Enable relativenumber";
-      event = [ "VimEnter" ];
-      command = "set relativenumber";
-    }
+
   ];
-  #autoCmd = [
-  #  {
-  #    event = [ "BufEnter" "BufWinEnter" ];
-  #    pattern = [ "*.md" "*.mdx" ];
-  #    command = "MarkdownPreviewToggle";
-  #  }
-  #];
 
   highlight = {
     Comment.fg = "#ff00ff";
