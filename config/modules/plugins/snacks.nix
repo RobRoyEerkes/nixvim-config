@@ -9,6 +9,9 @@
     enable = true;
     autoLoad = true;
     settings = {
+      explorer = {
+        replace-netrw = true;
+      };
       dashboard = {
         sections = [
           {
