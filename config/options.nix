@@ -34,7 +34,7 @@
     listchars.__raw = "{ tab = '» ', trail = '·', nbsp = '␣' }";
 
     expandtab = true;
-    tabstop = 4;
+    tabstop = 2;
     shiftwidth = 2;
     softtabstop = 0;
     smarttab = true;
